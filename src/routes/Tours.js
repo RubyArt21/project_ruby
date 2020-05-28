@@ -5,40 +5,43 @@ class Tours extends Component {
     return (
       <main>
         <div className="container">
-          <div className="row">
-            <div className="col s4 m4">
-              <div className="card">
-                <div className="card-image">
-                  <img className="tour" src="./1.jpg" alt="tour1" />
-                </div>
-                <div className="card-action color lime lighten-5">
-                  <a href="/">Tour</a>
-                </div>
-              </div>
+          <div className="card" style={{ width: "18rem" }}>
+            <img className="concerts w-100" src="./1.jpg" alt="concert1" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="/" className="btn btn-success moren">
+                Tours
+              </a>
             </div>
           </div>
-          <div className="row">
-            <div className="col s4 m4">
-              <div className="card">
-                <div className="card-image">
-                  <img className="tour" src="./1.jpg" alt="tour2" />
-                </div>
-                <div className="card-action color lime lighten-5">
-                  <a href="/">Tour</a>
-                </div>
-              </div>
+          <div className="card" style={{ width: "18rem" }}>
+            <img className="concerts w-100" src="./1.jpg" alt="concert1" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="/" className="btn btn-success moren">
+                Tours
+              </a>
             </div>
-          </div>{" "}
-          <div className="row">
-            <div className="col s4 m4">
-              <div className="card">
-                <div className="card-image">
-                  <img className="tour" src="./1.jpg" alt="tour3" />
-                </div>
-                <div className="card-action color lime lighten-5">
-                  <a href="/">Tour</a>
-                </div>
-              </div>
+          </div>
+          <div className="card" style={{ width: "18rem" }}>
+            <img className="concerts w-100" src="./1.jpg" alt="concert1" />
+            <div className="card-body">
+              <h5 className="card-title">Card title</h5>
+              <p className="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="/" className="btn btn-success moren">
+                Tours
+              </a>
             </div>
           </div>
         </div>
