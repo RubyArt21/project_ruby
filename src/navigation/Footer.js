@@ -7,32 +7,32 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <h5 className="white-text">Footer Content</h5>
+              <h5 className="black-text">Footer Content</h5>
               <p className="grey-text text-lighten-4">
                 You can use rows and columns here to organize your footer
                 content.
               </p>
             </div>
             <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Links</h5>
+              <h5 className="black-text">Links</h5>
               <ul>
                 <li>
-                  <a className="text-light" href="#!">
+                  <a className="text-dark" href="#!">
                     Link 1
                   </a>
                 </li>
                 <li>
-                  <a className="text-light" href="#!">
+                  <a className="text-dark" href="#!">
                     Link 2
                   </a>
                 </li>
                 <li>
-                  <a className="text-light" href="#!">
+                  <a className="text-dark" href="#!">
                     Link 3
                   </a>
                 </li>
                 <li>
-                  <a className="text-light" href="#!">
+                  <a className="text-dark" href="#!">
                     Link 4
                   </a>
                 </li>
@@ -41,12 +41,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-copyright">
-          <div className="container">
-            © 2020 By Ruby
-            <a className="text-light" href="#!">
-              More Links
-            </a>
-          </div>
+          <div className="container">© 2020 By Ruby</div>
         </div>
       </footer>
     );
