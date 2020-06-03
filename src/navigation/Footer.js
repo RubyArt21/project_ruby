@@ -7,39 +7,15 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col l6 s12">
-              <h5 className="black-text">Footer Content</h5>
+              <h5 className="black-text">Contacts</h5>
+              <p className="grey-text text-lighten-4">Minsk, Belarus.</p>
               <p className="grey-text text-lighten-4">
-                You can use rows and columns here to organize your footer
-                content.
+                +375(29)3065876, +375(44)5180078.
               </p>
-            </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="black-text">Links</h5>
-              <ul>
-                <li>
-                  <a className="text-dark" href="#!">
-                    Link 1
-                  </a>
-                </li>
-                <li>
-                  <a className="text-dark" href="#!">
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a className="text-dark" href="#!">
-                    Link 3
-                  </a>
-                </li>
-                <li>
-                  <a className="text-dark" href="#!">
-                    Link 4
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
+        <div className="icons"> </div>
         <div className="footer-copyright">
           <div className="container">© 2020 By Ruby</div>
         </div>

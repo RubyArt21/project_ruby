@@ -22,3 +22,19 @@ nav {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
     0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
+
+.form-control.mr-sm-2 {
+  background-color: #e0f2f1;
+}
+.form-control.mr-sm-2:focus {
+  border: 1px solid #ffffff;
+}
+.btn.btn-light.my-2.mr-sm-0 {
+  background-color: #297c78;
+}
+
+.btn.btn-info {
+  color: black;
+  background-color: #e0f2f1;
+  margin: 6px;
+}
