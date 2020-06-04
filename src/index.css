@@ -38,3 +38,13 @@ nav {
   background-color: #e0f2f1;
   margin: 6px;
 }
+
+.form-control:focus {
+
+  /*родная рамка хрома*/
+  /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/
+
+  /*замена*/
+  box-shadow: 0 0 10px 5px #ff1100;
+
+}
