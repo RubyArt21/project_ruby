@@ -1,16 +1,34 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 import Logo from "./../assets/VisitTogether.png";
+
+const LINKS = [
+  {
+    path: '/',
+    title: 'Concerts'
+  },
+  {
+    path: '/tours',
+    title: 'Tours'
+  },
+  {
+    path: '/contacts',
+    title: 'Contacts'
+  },
+]
 
 class Header extends Component {
   render() {
+    const path = this.props.location.pathname
     return (
-      <div id="outer-container">
-        <nav className="navbar matshadow navbar-expand-lg navbar-light">
+
+      <div>
+        <nav id="outer-container" className="navbar matshadow navbar-expand-lg navbar-light">
           <Link to="/" className="h-100">
             <img className="h-100" src={Logo} alt="logo" />
           </Link>
-          <form className="form-inline my-2 my-lg-0">
+          <form className="form-inline mx-2 my-2 my-lg-0">
             <input
               className="form-control mr-sm-2"
               type="search"
@@ -23,36 +41,31 @@ class Header extends Component {
           </form>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Concerts
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/tours">
-                  Tours
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contacts">
-                  Contacts
-                </Link>
-              </li>
+                { LINKS.map(link =>
+                  <li key={link.path} className="nav-item">
+                    <Link className={`nav-link ${path === link.path && 'active'}`} to={link.path}>
+                      {link.title}
+                    </Link>
+                  </li>)
+                }
             </ul>
           </div>
+
+          <div className="registr">
           <button type="button" className="btn btn-info">
             Sign up
           </button>
-
           <button type="button" className="btn btn-info">
             Log in
           </button>
+        </div>
         </nav>
 
         <div id="page-wrap" className="App"></div>
+
       </div>
     );
   }
 }
 
-export default Header;
+export default withRouter(Header);

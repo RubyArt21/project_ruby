@@ -23,12 +23,11 @@ nav {
     0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 
-.form-control.mr-sm-2 {
+.form-control {
   background-color: #e0f2f1;
 }
-.form-control.mr-sm-2:focus {
-  border: 1px solid #ffffff;
-}
+
+
 .btn.btn-light.my-2.mr-sm-0 {
   background-color: #297c78;
 }
@@ -43,8 +42,8 @@ nav {
 
   /*родная рамка хрома*/
   /*box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);*/
-
+border: 1px solid #006064;
   /*замена*/
-  box-shadow: 0 0 10px 5px #ff1100;
+  box-shadow: 0 0 7px 3px #006064;
 
 }
