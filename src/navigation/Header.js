@@ -28,7 +28,7 @@ class Header extends Component {
           <Link to="/" className="h-100">
             <img className="h-100" src={Logo} alt="logo" />
           </Link>
-          <form className="form-inline mx-2 my-2 my-lg-0">
+          <form className="form-inline mx-5 my-2 my-lg-0">
             <input
               className="form-control mr-sm-2"
               type="search"
@@ -40,9 +40,9 @@ class Header extends Component {
             </button>
           </form>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav mx-5">
                 { LINKS.map(link =>
-                  <li key={link.path} className="nav-item">
+                  <li key={link.path} className="nav-item mx-3">
                     <Link className={`nav-link ${path === link.path && 'active'}`} to={link.path}>
                       {link.title}
                     </Link>
@@ -51,7 +51,7 @@ class Header extends Component {
             </ul>
           </div>
 
-          <div className="registr">
+          <div className="registr mx-3">
           <button type="button" className="btn btn-info">
             Sign up
           </button>

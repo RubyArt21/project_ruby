@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Carousel from "nuka-carousel";
 
+const CAROUSEL_IMAGES = [ "conc1.png", "tour1.jpg", "tour2.jpg" ]
+
 class Concerts extends Component {
   render() {
     return (
@@ -8,10 +10,9 @@ class Concerts extends Component {
         <h5> Some Concerts</h5>
 
         <Carousel>
-          <img src="https://lorempixel.com/800/400/food/1" alt="pic1" />
-          <img src="https://lorempixel.com/800/400/food/2" alt="pic2" />
-          <img src="https://lorempixel.com/800/400/food/3" alt="pic3" />
-          <img src="https://lorempixel.com/800/400/food/4" alt="pic4" />
+          { CAROUSEL_IMAGES.map((image, index) =>
+            <img key={index} className='mx-auto carousel_image' src={image} alt=''/>
+          )}
         </Carousel>
 
         <div className="card" style={{ width: "18rem" }}>
@@ -27,6 +28,59 @@ class Concerts extends Component {
             </a>
           </div>
         </div>
+
+        <div className="card" style={{ width: "18rem" }}>
+          <img className="concerts w-100" src="./tour1.jpg" alt="tour1" />
+          <div className="card-body">
+            <h5 className="card-title">RAMMSTEIN EUROPE STADIUM TOUR</h5>
+            <p className="card-text">
+              17.07.2020 20:00 18+
+            </p>
+            <a href="/" className="btn btn-success moren">
+              Tours
+            </a>
+          </div>
+        </div>
+
+        <div className="card" style={{ width: "18rem" }}>
+          <img className="concerts w-100" src="./tour1.jpg" alt="tour1" />
+          <div className="card-body">
+            <h5 className="card-title">RAMMSTEIN EUROPE STADIUM TOUR</h5>
+            <p className="card-text">
+              17.07.2020 20:00 18+
+            </p>
+            <a href="/" className="btn btn-success moren">
+              Tours
+            </a>
+          </div>
+        </div>
+
+        <div className="card" style={{ width: "18rem" }}>
+          <img className="concerts w-100" src="./tour1.jpg" alt="tour1" />
+          <div className="card-body">
+            <h5 className="card-title">RAMMSTEIN EUROPE STADIUM TOUR</h5>
+            <p className="card-text">
+              17.07.2020 20:00 18+
+            </p>
+            <a href="/" className="btn btn-success moren">
+              Tours
+            </a>
+          </div>
+        </div>
+
+        <div className="card" style={{ width: "18rem" }}>
+          <img className="concerts w-100" src="./tour1.jpg" alt="tour1" />
+          <div className="card-body">
+            <h5 className="card-title">RAMMSTEIN EUROPE STADIUM TOUR</h5>
+            <p className="card-text">
+              17.07.2020 20:00 18+
+            </p>
+            <a href="/" className="btn btn-success moren">
+              Tours
+            </a>
+          </div>
+        </div>
+
       </main>
     );
   }
