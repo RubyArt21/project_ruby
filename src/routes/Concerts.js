@@ -15,14 +15,18 @@ const FAKE_DATA = [
   {
     img: "tour2.jpg",
     title: "IRON MAIDEN",
-    body: 'IRON MAIDEN concert',
+    body: '',
   },
 ]
 
 class Concerts extends Component {
   constructor(props) {
     super(props)
-r
+
+    this.state = {
+      concerts: [],
+    }
+  }
 
   componentDidMount() {
     const loadFakeData = new Promise((resolve, reject) => {
