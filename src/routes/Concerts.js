@@ -14,7 +14,7 @@ const FAKE_DATA = [
   },
   {
     img: "tour2.jpg",
-    title: "IRONMAIDEN",
+    title: "IRONMAN",
     body: '',
   },
 ]
@@ -29,6 +29,7 @@ class Concerts extends Component {
   }
 
   componentDidMount() {
+
     const loadFakeData = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(FAKE_DATA);
@@ -37,13 +38,14 @@ class Concerts extends Component {
 
     loadFakeData.then(data => this.setState({ concerts: data }))
 
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+
+    /*fetch('json/concerts')
     .then(response => response.json())
     .then(json => {
       console.log(json)
-      // const data = JSON.parse(json);
-      //this.setState({ concerts: data });
-    })
+      const data = JSON.parse(json);
+      this.setState({ concerts: data });
+    })*/
   }
 
   render() {
@@ -56,23 +58,20 @@ class Concerts extends Component {
       <main>
         <h5> Some Concerts</h5>
 
-        <Carousel>
-          { concerts.map((concert, index) =>
-            <img key={index} className='mx-auto carousel_image' src={concert.img} alt=''/>
-          )}
-        </Carousel>
-
         { concerts.map((concert, index) => (
           <div key={index} className="card" style={{ width: "18rem" }}>
-            <img className="concerts w-100" src={concert.img} alt="concert1" />
+            <img className="concerts w-100" src="твое изображение для всех"  alt="concert1" />
             <div className="card-body">
-              <h5 className="card-title">{concert.title}</h5>
+              <h5 className="card-title">
+                {concert.title}
+              </h5>
               <p className="card-text">
                 {concert.body}
               </p>
-              <a href="/" className="btn btn-success moren">
-                {concert.title}
-              </a>
+              <p className="card-text">
+                {concert.date}
+              </p>
+              <a href={`/translation?id=${concert.id}`} className="btn btn-success moren"></a>
             </div>
           </div>
         )) }
