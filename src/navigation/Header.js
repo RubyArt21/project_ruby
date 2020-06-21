@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
-import Logo from "./../assets/VisitTogether.png";
+import Logo from "./../assets/images/VisitTogether.png";
 
 const LINKS = [
   {

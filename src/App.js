@@ -8,6 +8,7 @@ import Concerts from "./routes/Concerts";
 import Contacts from "./routes/Contacts";
 import RegForm from "./routes/RegForm";
 import User from "./routes/User";
+import Translation from "./routes/Translation";
 import "./App.css";
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
             <Route exact path="/contacts" component={Contacts} />
             <Route exact path="/registration" component={RegForm} />
             <Route exact path="/user" component={User} />
+            <Route exact path="/concerts/:id" component={Translation} />
 
             <Route exact path="*">
               404
