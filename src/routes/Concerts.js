@@ -14,7 +14,7 @@ class Concerts extends Component {
   }
 
   componentDidMount() {
-
+    /*
     const loadFakeData = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(FAKE_DATA);
@@ -22,15 +22,14 @@ class Concerts extends Component {
     });
 
     loadFakeData.then(data => this.setState({ concerts: data }))
+    */
 
-
-    /*fetch('json/concerts')
+    fetch('json/concerts')
     .then(response => response.json())
     .then(json => {
       console.log(json)
-      const data = JSON.parse(json);
-      this.setState({ concerts: data });
-    })*/
+      this.setState({ concerts: json });
+    })
   }
 
   goToConcert(id) {
@@ -57,7 +56,7 @@ class Concerts extends Component {
             style={{ width: "18rem" }}
             onClick={() => this.goToConcert(concert.id)}
           >
-            <img className="concerts w-100" src={concert.img}  alt="concert1" />
+            <img className="concerts w-100" src="profil.jpg"  alt="concert1" />
             <div className="card-body">
               <h5 className="card-title">
                 {concert.title}
