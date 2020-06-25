@@ -5,7 +5,6 @@ import Header from "./navigation/Header";
 import Footer from "./navigation/Footer";
 import Tours from "./routes/Tours";
 import Concerts from "./routes/Concerts";
-import Contacts from "./routes/Contacts";
 import RegForm from "./routes/RegForm";
 import User from "./routes/User";
 import Translation from "./routes/Translation";
@@ -29,7 +28,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Concerts} />
             <Route exact path="/tours" component={Tours} />
-            <Route exact path="/contacts" component={Contacts} />
             <Route exact path="/registration" component={RegForm} />
             <Route exact path="/user" component={User} />
             <Route exact path="/concerts/:id" component={Translation} />

@@ -38,6 +38,15 @@ nav {
   margin: 6px;
 }
 
+.social_icon {
+  height: 32px;
+  width: 32px;
+}
+
+.card{
+  margin: 20px;
+}
+
 .form-control:focus {
 
   /*родная рамка хрома*/
@@ -45,9 +54,4 @@ nav {
 border: 1px solid #006064;
   /*замена*/
   box-shadow: 0 0 7px 3px #006064;
-}
-
-.carousel_image {
-  max-height: 400px;
-  width: auto !important;
 }

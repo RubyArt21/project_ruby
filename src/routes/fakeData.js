@@ -17,7 +17,7 @@ export const FAKE_DATA = [
   },
   {
     img: Tour2,
-    title: "IRONMAN",
+    title: "IRON MAIDEN",
     body: '',
     id: 3,
   },

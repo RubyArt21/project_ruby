@@ -12,10 +12,6 @@ const LINKS = [
     path: '/tours',
     title: 'Tours'
   },
-  {
-    path: '/contacts',
-    title: 'Contacts'
-  },
 ]
 
 class Header extends Component {
