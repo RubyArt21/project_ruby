@@ -11,26 +11,22 @@ class Translation extends Component {
     }
 
     componentDidMount() {
-        const loadFakeData = new Promise((resolve, reject) => {
+        /*const loadFakeData = new Promise((resolve, reject) => {
           setTimeout(() => {
             resolve(FAKE_DATA.find(concert => concert.id == this.props.match.params.id));
           }, 1000);
         });
 
         loadFakeData.then(data => this.setState({ concert: data }))
-
-        /*const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const id = urlParams.get('id')
-        fetch('json/translation?id='+ id)
+        */
+        fetch('json/translation/'+ this.props.match.params.id)
             .then(response => response.json())
             .then(json => {
                 console.log(json)
-                const data = JSON.parse(json);
-                this.setState({ concert: data });
+                this.setState({ concert: json });
             })
 
-         */
+
     }
 
     render() {
@@ -45,7 +41,7 @@ class Translation extends Component {
 
                 {
                     <div className="card" style={{ width: "18rem" }}>
-                        <img className="concerts w-100" src={concert.img} alt="твое изображение для всех" />
+                        <img className="concerts w-100" src="profil.jpg" alt="твое изображение для всех" />
                         <div className="card-body">
                             <h5 className="card-title">
                                 {concert.title}
