@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
-import Carousel from "nuka-carousel";
-import { FAKE_DATA } from './fakeData'
 
 class Concerts extends Component {
   constructor(props) {
@@ -14,15 +12,6 @@ class Concerts extends Component {
   }
 
   componentDidMount() {
-    /*
-    const loadFakeData = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(FAKE_DATA);
-      }, 1000);
-    });
-
-    loadFakeData.then(data => this.setState({ concerts: data }))
-    */
 
     fetch('json/concerts')
     .then(response => response.json())
