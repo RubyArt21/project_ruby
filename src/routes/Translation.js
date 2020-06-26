@@ -6,8 +6,17 @@ class Translation extends Component {
         super(props)
 
         this.state = {
-            concert: null,
+            concert: {},
+            isShowHiddenButton: true,
         }
+    }
+
+    loadFakeData = () => {
+      fetch('json/translation/'+ this.props.match.params.id)
+          .then(response => response.json())
+          .then(json => {
+              this.setState({ concert: json });
+          })
     }
 
     componentDidMount() {
@@ -19,18 +28,13 @@ class Translation extends Component {
 
         loadFakeData.then(data => this.setState({ concert: data }))
         */
-        fetch('json/translation/'+ this.props.match.params.id)
-            .then(response => response.json())
-            .then(json => {
-                console.log(json)
-                this.setState({ concert: json });
-            })
+        this.loadFakeData()
 
 
     }
 
     render() {
-        const concert = this.state.concert;
+        const { isShowHiddenButton, concert } = this.state;
         if (!concert) {
             return <div>Loading...</div>
         }
@@ -55,6 +59,14 @@ class Translation extends Component {
                         </div>
                     </div>
                 }
+
+                <button onClick={() => this.setState({isShowHiddenButton: !isShowHiddenButton})} className='btn btn-info'>
+                  Change content
+                </button>
+
+                <button onClick={() => this.loadFakeData()} hidden={isShowHiddenButton} className='btn btn-info'>
+                  InvisbleButton
+                </button>
 
             </main>
         );
