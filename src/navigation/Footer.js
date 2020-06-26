@@ -15,9 +15,9 @@ class Footer extends Component {
               </div>
 
         <div className="icons d-flex ml-auto">
-          <img class='social_icon' src="ig.png" alt="socmed" />
-          <img class='social_icon mx-2' src="tr.png" alt="socmed" />
-          <img class='social_icon' src="fb.png" alt="socmed" />
+          <img className='social_icon' src="ig.png" alt="socmed" />
+          <img className='social_icon mx-2' src="tr.png" alt="socmed" />
+          <img className='social_icon' src="fb.png" alt="socmed" />
          </div>
          </div>
        </div>
